@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'restaurants#index'
 
-  get 'restaurants/:id/reviews/new', to: 'reviews#new'
+  get 'restaurants/:id/reviews/new', to: 'reviews#new', as: :new_review
 
   post 'restaurants/:id/reviews', to: 'reviews#create'
 
